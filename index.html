@@ -1,0 +1,65 @@
+<!--
+    Author:Ranjith 
+    Description:Smart-watch web application provides the  date,time,lap time,music palyer and messaging features.
+-->
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="function.js"></script>
+</head>
+<body>
+   <div class="main">
+       <!-- left part of the screen -->
+       <div class="left">
+          <h1><span>Smart</span>Watch</h1>
+
+       </div>
+       <!-- right part of the screen where we designed smart-watch -->
+       <div class="right">
+           <div class="row">
+               <!-- here we designed first strip of smart-watch -->
+       <div class="col-sm-12 FisrtStrip">
+           <p>First strip</p>
+         
+       </div>
+       <!-- here we designed dial pad of watch -->
+       <div class="col-sm-12 dialScreen">
+           <!-- <p> Dial pad</p> -->
+           <div class="home">
+               <div class="screen">
+                    <div class="music">
+                      <h4>Music</h4>
+                      <input type="button" class="btn btn-info"value="Start">
+                      <input type="button" class="btn btn-info"value="Lap">
+                    </div>
+               </div>
+               
+            </div>
+       </div>
+       <!-- here we designed second strip of watch -->
+       <div class="col-sm-12 SecondStrip">
+           <p> Last strip</p>
+       </div>
+       </div>
+       </div>
+   </div>
+
+</body>
+</html>
