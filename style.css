@@ -84,20 +84,29 @@ span{
 
 }
 #start{
-    margin-top:12em;
-    margin-left: 1em;
+    margin-top:.5em;
+    margin-left: .8em;
+    float: left;
 }
   
-#reset{
-    margin-top:12em;
-    margin-right: 1em;
+#restart{
+    margin-top:0.5em;
+    margin-right:.6em;
     float: right;
 }
-  #lap{
-    margin-top:12em;
+#lap{
+    margin-top:0.5em;
     margin-right: 1em;
     
     float: right;
+}
+#clear{
+    margin-top:8em;
+    margin-left:1em;
+}
+#stop{
+    margin-top:8em;
+    margin-left:4.8em;
 }
 .musicStart{
     padding-bottom: 2px;
@@ -143,11 +152,36 @@ span{
     position: relative;
     align-content: center;
     justify-content: center;
-    background-color:lightslategrey;
+    background-color:white;
     /* margin-top:5em; */
     width: 238px;
     height: 260px;
     border-radius: 10%;
     margin-left: 1%;
-    bottom:0.3em;
+    bottom:1.25em;
+}
+#player{
+    border-radius: 9%;
+}
+#music{
+    margin-top: 0.5em;
+    width:35px;
+    float: left;
+    margin-left:0em;
+    border-radius: 5px;
+}
+#message{
+    margin-top: 0.5em;
+    width:35px;
+    float: left;
+    margin-left:.5em;
+    border-radius: 5px;
+}
+#time{
+    margin-top: 0.5em;
+    width:35px;
+    margin-left: 0.2em;
+    float: right;
+    margin-right:0em;
+    border-radius: 5px;
 }

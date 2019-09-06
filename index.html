@@ -2,7 +2,7 @@
     Author:Ranjith 
     Description:Smart-watch web application provides the  date,time,lap time,music palyer and messaging features.
 -->
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -49,20 +49,32 @@ crossorigin="anonymous"></script>
                             <a href="#" class="btn btn-danger"id="stop" onClick="stopwatch.stop();">Stop</a>
                             <a href="#" class="bt btn-info" id="lap" onClick="stopwatch.lap();">Lap</a>
                              <a href="#" class="btn btn-danger" id="reset"onClick="stopwatch.restart();">Restart</a>
-                            <a href="#" class="bt btn-info" id="clear" onClick="stopwatch.clear();">Clear</a> -->
-<!--                             
-                       <button type="button" onclick="startTime()" class="btn btn-success" id="start">Start</button>
-                       <button type="button" onclick="resetTime()" class="btn btn-info" id="reset">Reset</button>
-                      <button type="button" onclick="lapTime()" class="btn btn-danger" id="lap">Lap</button> -->
-                      
+                            <a href="#" class="bt btn-info" id="clear" onClick="stopwatch.clear();">Clear</a> -->                          
+
                       <div class="musicApp" style="display: block"> 
-                        <div class="musicDisplay">Music</div>
+                        <div class="musicDisplay">
+                            <div class="playMusic">
+                                    <iframe id="player" src="https://open.spotify.com/embed/playlist/37i9dQZF1DWXJfnUiYjUKT"
+                                    width="238" height="260" frameborder="0" allowtransparency="true"
+                                    allow="encrypted-media"></iframe>
+                            </div>
+                        </div>
                     </div>
                       <div class="messages" style="display: block">
                         <div class="chatBox"> Messages</div>
                     </div>
                       <div class="timings" style="display: block">
-                        <div class="times">Time</div>
+                        <div class="times">
+                                <div class="stopwatch">
+                                    </div>
+                                    <ul class="results">
+                                    </ul>
+                         <button type="button" onclick="stopwatch.startTime();" class="btn btn-success" id="start">Start</button>
+                         <button type="button" onclick="stopwatch.restartTime();" class="btn btn-info" id="restart">Restart</button>
+                         <button type="button" onclick="stopwatch.lapTime();" class="btn btn-primary" id="lap">Lap</button>
+                         <button type="button" onclick="stopwatch.clearTime();" class="btn btn-warning" id="clear">Clear</button>
+                         <button type="button" onclick="stopwatch.stopTime();" class="btn btn-danger" id="stop">Stop</button>
+                        </div>
                     </div>
                     <!-- </div> -->
                </div>
