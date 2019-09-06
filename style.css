@@ -7,6 +7,26 @@
  margin: 0;
  padding: 0; 
 }
+.col-sm-12.FisrtStrip{
+    position: absolute;
+    top:5.2em;
+    background-color:black;
+    width: 150px;
+    height: 130px;
+    border-radius: 35% 35% 0% 0%;
+    margin-left: 13.8%;
+      
+}
+.col-sm-12.SecondStrip{
+    position: absolute;
+    bottom:0.75em;
+    background-color:black;
+    width: 150px;
+    height: 130px;
+    border-radius:0% 0% 35% 35%;
+    margin-left: 13.8%;
+      
+}
 .left{
     background-color: blue;
     float: left;
@@ -27,24 +47,29 @@ span{
     height: 100%;
 }
 .home{
+    top:8em;
     position: relative;
     align-content: center;
     justify-content: center;
     background-color:dimgrey;
-    width: 275px;
+    width: 250px;
     height: 275px;
     border-radius: 10%;
     margin-left: 50%;
+    
+    
 
 }
 
 .screen{
+    top: 0.5em;
+    left:0.1em;
     position: relative;
     align-content: center;
     justify-content: center;
     background-color:black;
     margin-top:5em;
-    width: 260px;
+    width: 238px;
     height: 260px;
     border-radius: 10%;
     margin-left: 2%;
@@ -57,4 +82,72 @@ span{
     padding-top: 5px;
     margin-left: 10px;
 
+}
+#start{
+    margin-top:12em;
+    margin-left: 1em;
+}
+  
+#reset{
+    margin-top:12em;
+    margin-right: 1em;
+    float: right;
+}
+  #lap{
+    margin-top:12em;
+    margin-right: 1em;
+    
+    float: right;
+}
+.musicStart{
+    padding-bottom: 2px;
+    margin-left: 2px;
+}
+.chat{
+    margin-left: 12px;
+}
+.timer{
+    margin-left:15px;
+}
+.musicDisplay{ 
+    /* top: 0.5em; */
+    right:0.1em;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    background-color:red;
+    /* margin-top:5em; */
+    width: 238px;
+    height: 260px;
+    border-radius: 10%;
+    margin-left: 1%;
+    bottom:0.3em;
+}
+.chatBox{ 
+    /* top: 0.5em; */
+    right:0.1em;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    background-color:slateblue;
+    /* margin-top:5em; */
+    width: 238px;
+    height: 260px;
+    border-radius: 10%;
+    margin-left: 1%;
+    bottom:0.3em;
+}
+.times{ 
+    /* top: 0.5em; */
+    right:0.1em;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    background-color:lightslategrey;
+    /* margin-top:5em; */
+    width: 238px;
+    height: 260px;
+    border-radius: 10%;
+    margin-left: 1%;
+    bottom:0.3em;
 }

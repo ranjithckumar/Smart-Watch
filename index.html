@@ -36,7 +36,7 @@ crossorigin="anonymous"></script>
            <div class="row">
                <!-- here we designed first strip of smart-watch -->
        <div class="col-sm-12 FisrtStrip">
-           <p>First strip</p>
+           <!-- <p>First strip</p> -->
          
        </div>
        <!-- here we designed dial pad of watch -->
@@ -44,22 +44,50 @@ crossorigin="anonymous"></script>
            <!-- <p> Dial pad</p> -->
            <div class="home">
                <div class="screen">
-                    <div class="music">
-                      <h4>Music</h4>
-                      <input type="button" class="btn btn-info"value="Start">
-                      <input type="button" class="btn btn-info"value="Lap">
+                    <!-- <div class="lapTime" id="startLap"> -->
+                            <!-- <a href="#" class="btn btn-success"id="start" onClick="stopwatch.start();">Start</a>
+                            <a href="#" class="btn btn-danger"id="stop" onClick="stopwatch.stop();">Stop</a>
+                            <a href="#" class="bt btn-info" id="lap" onClick="stopwatch.lap();">Lap</a>
+                             <a href="#" class="btn btn-danger" id="reset"onClick="stopwatch.restart();">Restart</a>
+                            <a href="#" class="bt btn-info" id="clear" onClick="stopwatch.clear();">Clear</a> -->
+<!--                             
+                       <button type="button" onclick="startTime()" class="btn btn-success" id="start">Start</button>
+                       <button type="button" onclick="resetTime()" class="btn btn-info" id="reset">Reset</button>
+                      <button type="button" onclick="lapTime()" class="btn btn-danger" id="lap">Lap</button> -->
+                      
+                      <div class="musicApp" style="display: block"> 
+                        <div class="musicDisplay">Music</div>
                     </div>
+                      <div class="messages" style="display: block">
+                        <div class="chatBox"> Messages</div>
+                    </div>
+                      <div class="timings" style="display: block">
+                        <div class="times">Time</div>
+                    </div>
+                    <!-- </div> -->
                </div>
                
             </div>
        </div>
        <!-- here we designed second strip of watch -->
        <div class="col-sm-12 SecondStrip">
-           <p> Last strip</p>
+           <!-- <p> Last strip</p> -->
+           <button class="musicStart" id="music">🎵</button>   
+           <button class="chat" id="message">💬</button>
+            <button class="timer" id="time">🕔</button>
        </div>
        </div>
        </div>
    </div>
-
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="function.js"></script>
 </body>
 </html>
