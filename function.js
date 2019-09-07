@@ -103,7 +103,7 @@ $(document).ready(function(){
             milliseconds = '0' + milliseconds;
           }
       
-          return minutes + ' : ' + seconds + ' . ' + milliseconds;
+          return minutes + ' : ' + seconds + ' : ' + milliseconds;
         }
       
         this.start = function() {
