@@ -186,12 +186,6 @@ span{
     margin-right:0em;
     border-radius: 5px;
 }
-#chatArea::-webkit-scrollbar-thumb{
-    background-color: aqua;
-}
-#chatArea::-webkit-scrollbar-thumb{
-    background-color: aqua;
-}
 #textbox{
     float:left;
     margin-top:14em;
