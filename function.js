@@ -21,106 +21,105 @@ $(document).ready(function(){
         $(".messages").hide();
         $(".musicApp").hide();
     });
-
-
-
-class Stopwatch {
-    constructor(display, results) {
-        this.running = false;
-        this.display = display;
-        this.results = results;
-        this.laps = [];
-        this.reset();
-        this.print(this.times);
+    
+    var messages=document.getElementById("chatlist");
+    var textbox=document.getElementById("textbox"); 
+    var button=document.getElementById("button");
+    button.addEventListener("click",function(){
+        var newMessage=document.createElement("li");
+        newMessage.innerHTML=textbox.value; 
+        // var newMessage=textbox.value;
+        messages.appendChild(newMessage);
+        textbox.value="";
+        // document.getElementById("chatlist").innerHTML=newMessage;
+        // console.log(newMessage);
+    });
+      
+    var timer = document.getElementById('timer');
+    var toggleBtn = document.getElementById('start');
+    var resetBtn = document.getElementById('restart');
+    
+    var watch = new Stopwatch(timer);
+    
+    function start() {
+      toggleBtn.textContent = 'Stop';
+      watch.start();
     }
     
-    reset() {
-        this.times = [ 0, 0, 0 ];
+    function stop() {
+      toggleBtn.textContent = 'Start';
+      watch.stop();
     }
     
-    startTime() {
-        if (!this.time) this.time = performance.now();
-        if (!this.running) {
-            this.running = true;
-            requestAnimationFrame(this.step.bind(this));
+    toggleBtn.addEventListener('click', function() {
+      watch.isOn ? stop() : start();
+    });
+    
+    resetBtn.addEventListener('click', function() {
+      watch.reset();
+    })
+    
+    function Stopwatch(elem) {
+        var time = 0;
+        var offset;
+        var interval;
+      
+        function update() {
+          if (this.isOn) {
+            time += delta();
+          }
+          
+          elem.textContent = timeFormatter(time);
         }
-    }
-    
-    lapTime() {
-        let times = this.times;
-        let li = document.createElement('li');
-        li.innerText = this.format(times);
-        this.results.appendChild(li);
-    }
-    
-    stopTime() {
-        this.running = false;
-        this.time = null;
-    }
-
-    restartTime() {
-        if (!this.time) this.time = performance.now();
-        if (!this.running) {
-            this.running = true;
-            requestAnimationFrame(this.step.bind(this));
+      
+        function delta() {
+          var now = Date.now();
+          var timePassed = now - offset;
+      
+          offset = now;
+      
+          return timePassed;
         }
-        this.reset();
-    }
-    
-    clearTime() {
-        clearChildren(this.results);
-    }
-    
-    step(timestamp) {
-        if (!this.running) return;
-        this.calculate(timestamp);
-        this.time = timestamp;
-        this.print();
-        requestAnimationFrame(this.step.bind(this));
-    }
-    
-    calculate(timestamp) {
-        var diff = timestamp - this.time;
-        // Hundredths of a second are 100 ms
-        this.times[2] += diff / 10;
-        // Seconds are 100 hundredths of a second
-        if (this.times[2] >= 100) {
-            this.times[1] += 1;
-            this.times[2] -= 100;
+      
+        function timeFormatter(time) {
+          time = new Date(time);
+      
+          var minutes = time.getMinutes().toString();
+          var seconds = time.getSeconds().toString();
+          var milliseconds = time.getMilliseconds().toString();
+      
+          if (minutes.length < 2) {
+            minutes = '0' + minutes;
+          }
+      
+          if (seconds.length < 2) {
+            seconds = '0' + seconds;
+          }
+      
+          while (milliseconds.length < 3) {
+            milliseconds = '0' + milliseconds;
+          }
+      
+          return minutes + ' : ' + seconds + ' . ' + milliseconds;
         }
-        // Minutes are 60 seconds
-        if (this.times[1] >= 60) {
-            this.times[0] += 1;
-            this.times[1] -= 60;
-        }
-    }
-    
-    print() {
-        this.display.innerText = this.format(this.times);
-    }
-    
-    format(times) {
-        return `\
-${pad0(times[0], 2)}:\
-${pad0(times[1], 2)}:\
-${pad0(Math.floor(times[2]), 2)}`;
-    }
-}
-
-function pad0(value, count) {
-    var result = value.toString();
-    for (; result.length < count; --count)
-        result = '0' + result;
-    return result;
-}
-
-function clearChildren(node) {
-    while (node.lastChild)
-        node.removeChild(node.lastChild);
-}
-let stopwatch = new Stopwatch(
-    document.querySelector('.stopwatch'),
-    document.querySelector('.results')
-    );
-
+      
+        this.start = function() {
+          interval = setInterval(update.bind(this), 10);
+          offset = Date.now();
+          this.isOn = true;
+        };
+      
+        this.stop = function() {
+          clearInterval(interval);
+          interval = null;
+          this.isOn = false;
+        };
+      
+        this.reset = function() {
+          time = 0;
+          update();
+        };
+      
+        this.isOn = false;
+      }
 });
