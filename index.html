@@ -60,17 +60,21 @@ crossorigin="anonymous"></script>
                             </div>
                         </div>
                     </div>
-                      <div class="messages" style="display: block">
-                        <div class="chatBox"> Messages</div>
+                      <div class="messages" style="display:block">
+                      <ul id="chatlist"></ul>
+                      <input type="text" id="textbox">
+                      <button id="button">send</button>
+                      <!-- <button id="buttons"class="btn btn-info">Show</button> -->
                     </div>
                       <div class="timings" style="display: block">
-                        <div class="times">
+                        <div class=" times">
                                 <div class="stopwatch">
                                     </div>
                                     <ul class="results">
                                     </ul>
+                                    <h1 id="timer">00 : 00 . 000</h1>
                          <button type="button" onclick="stopwatch.startTime();" class="btn btn-success" id="start">Start</button>
-                         <button type="button" onclick="stopwatch.restartTime();" class="btn btn-info" id="restart">Restart</button>
+                         <button type="button" onclick="stopwatch.restartTime();" class="btn btn-info" id="restart">Reset</button>
                          <button type="button" onclick="stopwatch.lapTime();" class="btn btn-primary" id="lap">Lap</button>
                          <button type="button" onclick="stopwatch.clearTime();" class="btn btn-warning" id="clear">Clear</button>
                          <button type="button" onclick="stopwatch.stopTime();" class="btn btn-danger" id="stop">Stop</button>

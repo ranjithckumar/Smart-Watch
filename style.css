@@ -28,7 +28,7 @@
       
 }
 .left{
-    background-color: blue;
+    background-color:cyan;
     float: left;
     display: flex;
     align-items: center;
@@ -97,16 +97,18 @@ span{
 #lap{
     margin-top:0.5em;
     margin-right: 1em;
-    
+    visibility: hidden;
     float: right;
 }
 #clear{
     margin-top:8em;
     margin-left:1em;
+    visibility: hidden;
 }
 #stop{
     margin-top:8em;
     margin-left:4.8em;
+    visibility: hidden;
 }
 .musicStart{
     padding-bottom: 2px;
@@ -124,7 +126,7 @@ span{
     position: relative;
     align-content: center;
     justify-content: center;
-    background-color:red;
+    background-color:black;
     /* margin-top:5em; */
     width: 238px;
     height: 260px;
@@ -132,19 +134,19 @@ span{
     margin-left: 1%;
     bottom:0.3em;
 }
-.chatBox{ 
+.messages{ 
     /* top: 0.5em; */
     right:0.1em;
     position: relative;
     align-content: center;
     justify-content: center;
-    background-color:slateblue;
+    background-color:darkturquoise;
     /* margin-top:5em; */
     width: 238px;
     height: 260px;
     border-radius: 10%;
     margin-left: 1%;
-    bottom:0.3em;
+    bottom:1.29em;
 }
 .times{ 
     /* top: 0.5em; */
@@ -184,4 +186,18 @@ span{
     float: right;
     margin-right:0em;
     border-radius: 5px;
+}
+#chatArea::-webkit-scrollbar-thumb{
+    background-color: aqua;
+}
+#textbox{
+    float:left;
+    margin-top:14em;
+    margin-left:0.8em;
+    border-radius: 2px;
+    
+}
+#button{
+    margin-top:14em;
+    background-color:coral;
 }
