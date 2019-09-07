@@ -44,13 +44,7 @@ crossorigin="anonymous"></script>
            <!-- <p> Dial pad</p> -->
            <div class="home">
                <div class="screen">
-                    <!-- <div class="lapTime" id="startLap"> -->
-                            <!-- <a href="#" class="btn btn-success"id="start" onClick="stopwatch.start();">Start</a>
-                            <a href="#" class="btn btn-danger"id="stop" onClick="stopwatch.stop();">Stop</a>
-                            <a href="#" class="bt btn-info" id="lap" onClick="stopwatch.lap();">Lap</a>
-                             <a href="#" class="btn btn-danger" id="reset"onClick="stopwatch.restart();">Restart</a>
-                            <a href="#" class="bt btn-info" id="clear" onClick="stopwatch.clear();">Clear</a> -->                          
-
+                   <!-- <h3 id="hTime"></h3>:: <h3 id="mTime"></h3>::<h3 id="sTime"></h3> -->
                       <div class="musicApp" style="display: block"> 
                         <div class="musicDisplay">
                             <div class="playMusic">
@@ -61,10 +55,15 @@ crossorigin="anonymous"></script>
                         </div>
                     </div>
                       <div class="messages" style="display:block">
-                      <ul id="chatlist"></ul>
+                            <div id="msg">
+                                    <div class="mb-2 mt-2" id="list1"> </div>
+                                    <div class="mb-2" id="list2"> </div>
+                                    <div class="mb-2" id="list3"> </div>
+                                </div>
+                      <!-- <ul id="chatlist"></ul>
                       <input type="text" id="textbox">
                       <button id="button">send</button>
-                      <!-- <button id="buttons"class="btn btn-info">Show</button> -->
+                      <button id="buttons"class="btn btn-info">Show</button> -->
                     </div>
                       <div class="timings" style="display: block">
                         <div class=" times">
@@ -89,7 +88,7 @@ crossorigin="anonymous"></script>
        <div class="col-sm-12 SecondStrip">
            <!-- <p> Last strip</p> -->
            <button class="musicStart" id="music">🎵</button>   
-           <button class="chat" id="message">💬</button>
+           <button class="chat" id="message" onclick="msg()">💬</button>
             <button class="timer" id="time">🕔</button>
        </div>
        </div>

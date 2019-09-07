@@ -1,5 +1,4 @@
 .main{
-    /* background-color:blue; */
     width: 100vw;
     height: 100vh;
 }
@@ -141,7 +140,7 @@ span{
     align-content: center;
     justify-content: center;
     background-color:darkturquoise;
-    /* margin-top:5em; */
+    margin-top:1em;
     width: 238px;
     height: 260px;
     border-radius: 10%;
@@ -201,3 +200,30 @@ span{
     margin-top:14em;
     background-color:coral;
 }
+#msg {
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    left: 10%;
+    top: 8%;
+    background-color: white;
+    border-radius: 0% 17% 17% 17%;
+  }
+  
+  #msg #list1:hover {
+    cursor: pointer;
+    color:mediumpurple;
+    font-weight: lighter;
+  }
+  
+  #msg #list2:hover {
+    cursor: pointer;
+    color: mediumpurple;
+    font-weight: lighter;
+  }
+  
+  #msg #list3:hover {
+    cursor: pointer;
+    color: mediumpurple;
+    font-weight: lighter;
+  }
