@@ -189,6 +189,9 @@ span{
 #chatArea::-webkit-scrollbar-thumb{
     background-color: aqua;
 }
+#chatArea::-webkit-scrollbar-thumb{
+    background-color: aqua;
+}
 #textbox{
     float:left;
     margin-top:14em;
