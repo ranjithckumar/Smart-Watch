@@ -4,9 +4,6 @@ $(document).ready(function(){
     $(".timings").hide();
 
     $('#music').click(function(){
-        // document.getElementsByClassName("musicApp").style.dispaly='none';
-        // document.getElementsByClassName("messages").style.dispaly='block';
-        // document.getElementsByClassName("timings").style.dispaly='block';
          $(".musicApp").show();
          $(".messages").hide();
          $(".timings").hide();
@@ -21,19 +18,25 @@ $(document).ready(function(){
         $(".messages").hide();
         $(".musicApp").hide();
     });
-    
-    var messages=document.getElementById("chatlist");
-    var textbox=document.getElementById("textbox"); 
-    var button=document.getElementById("button");
-    button.addEventListener("click",function(){
-        var newMessage=document.createElement("li");
-        newMessage.innerHTML=textbox.value; 
-        // var newMessage=textbox.value;
-        messages.appendChild(newMessage);
-        textbox.value="";
-        // document.getElementById("chatlist").innerHTML=newMessage;
-        // console.log(newMessage);
+    $("#msg #list1").on("click", function() {
+        $("#msg #list1").html("Ranjith kumar c" + "<hr>");
+      });
+      
+      $("#msg #list2").on("click", function() {
+        $("#msg #list2").html("The National Institute of Engineering" + "<hr>");
+      });
+      
+      $("#msg #list3").on("click", function() {
+        $("#msg #list3").html("Mysore, Karnataka" + "<hr>");
+      });
     });
+    function msg() {
+        let messages = ["Name", "College", "Address"];
+        document.querySelector("#msg #list1").innerHTML = messages[0] + "<hr>";
+        document.querySelector("#msg #list2").innerHTML = messages[1] + "<hr>";
+        document.querySelector("#msg #list3").innerHTML = messages[2] + "<hr>";
+      }
+ 
       
     var timer = document.getElementById('timer');
     var toggleBtn = document.getElementById('start');
@@ -122,4 +125,3 @@ $(document).ready(function(){
       
         this.isOn = false;
       }
-});
