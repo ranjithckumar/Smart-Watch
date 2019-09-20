@@ -32,9 +32,9 @@ $(document).ready(function(){
     });
     function msg() {
         let messages = ["AD-RAPIDO", "JX-620005", "BH-CUREFIT"];
-        document.querySelector("#msg #list1").innerHTML = messages[0] + "<hr>";
-        document.querySelector("#msg #list2").innerHTML = messages[1] + "<hr>";
-        document.querySelector("#msg #list3").innerHTML = messages[2] + "<hr>";
+        document.querySelector("#msg #list1").innerHTML = messages[0] ;
+        document.querySelector("#msg #list2").innerHTML = messages[1] ;
+        document.querySelector("#msg #list3").innerHTML = messages[2] ;
       }
  
       
