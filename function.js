@@ -19,19 +19,19 @@ $(document).ready(function(){
         $(".musicApp").hide();
     });
     $("#msg #list1").on("click", function() {
-        $("#msg #list1").html("Ranjith kumar c" + "<hr>");
+        $("#msg #list1").html("OTP for Rapido verification" + "<hr>");
       });
       
       $("#msg #list2").on("click", function() {
-        $("#msg #list2").html("The National Institute of Engineering" + "<hr>");
+        $("#msg #list2").html("Thanks for recharging" + "<hr>");
       });
       
       $("#msg #list3").on("click", function() {
-        $("#msg #list3").html("Mysore, Karnataka" + "<hr>");
+        $("#msg #list3").html("Your order has been delivered" + "<hr>");
       });
     });
     function msg() {
-        let messages = ["Name", "College", "Address"];
+        let messages = ["AD-RAPIDO", "JX-620005", "BH-CUREFIT"];
         document.querySelector("#msg #list1").innerHTML = messages[0] + "<hr>";
         document.querySelector("#msg #list2").innerHTML = messages[1] + "<hr>";
         document.querySelector("#msg #list3").innerHTML = messages[2] + "<hr>";
