@@ -55,9 +55,6 @@ span{
     height: 275px;
     border-radius: 10%;
     margin-left: 50%;
-    
-    
-
 }
 
 .screen{
@@ -83,31 +80,15 @@ span{
 
 }
 #start{
-    margin-top:.5em;
-    margin-left: .8em;
-    float: left;
+    margin:.5em 0 0 0.8em;
 }
   
 #restart{
-    margin-top:0.5em;
-    margin-right:.6em;
-    float: right;
-}
-#lap{
-    margin-top:0.5em;
-    margin-right: 1em;
-    visibility: hidden;
-    float: right;
-}
-#clear{
-    margin-top:8em;
-    margin-left:1em;
-    visibility: hidden;
+    margin:0.5em 6em 0 0;
 }
 #stop{
-    margin-top:8em;
-    margin-left:4.8em;
-    visibility: hidden;
+    margin:0.5em 0 0.5em 0;
+    visibility: visible;
 }
 .musicStart{
     padding-bottom: 2px;
@@ -115,6 +96,9 @@ span{
 }
 .chat{
     margin-left: 12px;
+}
+h2{
+    margin:0 0 0 55px;
 }
 .timer{
     margin-left:15px;
@@ -202,10 +186,9 @@ h1{
 }
 #msg {
     position: absolute;
-    height: 85%;
-    width: 85%;
-    left: 10%;
-    top: 8%;
+    height: 90%;
+    width: 90%;
+    margin:8% 0 0 5%;
     background-color: white;
     border-radius: 0% 17% 17% 17%;
   }
