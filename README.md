@@ -10,3 +10,6 @@ In this web application we designed a Smart-Watch. It will show current date,tim
 https://ranjithckumar.github.io/Smart-Watch/
 
 ![enter image description here](https://github.com/ranjithckumar/Smart-Watch/blob/master/img/Smart%20watch%20%282%29.png)
+# Tools and technologies
+Html,Css,Javascript and Jquery.
+Spotify music api.
